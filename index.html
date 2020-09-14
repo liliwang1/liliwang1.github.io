@@ -10,8 +10,14 @@
 <body>
 <h1>hi</h1>
 <h1>hello</h1>
+<!--<div>world</div>-->
+<a href="link.html" target="_blank">a link</a>
+<button id="btn">a button</button>
 
-
-<script></script>
+<script>
+    document.getElementById('btn').addEventListener('click', function () {
+        location.assign('http://google.com');
+    })
+</script>
 </body>
 </html>
