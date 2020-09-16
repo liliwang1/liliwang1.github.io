@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-/*:root {*/
-/*    --arizonia-font: ;*/
-/*}*/
+
+:root {
+    --primary-clr: #a58181;
+    --secondary-clr: #ad9d9d;
+    --background-clr: #b0b2b2;
+}
 
 * {
     box-sizing: border-box;
@@ -16,7 +19,6 @@ html {
 
 body {
     background-color: #eee;
-    height:100vh;
     margin: 5vh 10vw;
     padding: 30px;
 }
@@ -24,7 +26,7 @@ body {
 header {
     background-image: url("../assets/dasiy.jpg");
     background-size: cover;
-    height: calc(95vh - 130px);
+    height: calc(95vh - 139px);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -34,7 +36,7 @@ header {
     font-family: 'Arizonia', cursive;
     text-align: center;
     font-size: 16vw;
-    color: #b48e8e;
+    color: var(--primary-clr);
     /*mix-blend-mode:exclusion;*/
     align-self: center;
     margin: auto;
@@ -55,24 +57,45 @@ a {
 
 a:hover {
     cursor: pointer;
-    color: #ad9d9d;
+    color: var(--secondary-clr);
 }
 
-.nav-ul {
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+.tabs {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-top: 2px solid #b0b2b2;
-    border-bottom: 2px solid #b0b2b2;
+    border-top: 2px solid var(--background-clr);
+    border-bottom: 2px solid var(--background-clr);
     margin: 25px 0;
     font-size: 1.5em;
-    color: #444;
-    height: 50px;
+    font-weight: bold;
+    color: var(--primary-clr);
     font-family: 'Roboto', sans-serif;
 }
 
-.nav-ul li:hover {
-    color: #b48e8e;
+.tab {
+    padding: 12px;
+}
+
+.tab.active {
+    border-bottom: 3px solid var(--background-clr);
+}
+
+.tab:hover {
+    color: #666;
     cursor: pointer;
+    border-bottom: 3px solid var(--primary-clr);
+}
+
+.tab-content {
+    margin: 0 20px;
 }

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <title>Welcome to Li Wang's Personal Website</title>
 </head>
@@ -17,21 +16,39 @@
     </div>
 </header>
 <nav>
-    <ul class="nav-ul">
-        <li>about</li>
-        <li>portfolio</li>
-        <li>home</li>
-        <li>blog</li>
-        <li>contact</li>
+    <ul class="tabs">
+        <li data-tab-target="#about" class="tab">about</li>
+        <li data-tab-target="#portfolio" class="tab">portfolio</li>
+        <li data-tab-target="#home" class="tab active">home</li>
+        <li data-tab-target="#blog" class="tab">blog</li>
+        <li data-tab-target="#contact" class="tab">contact</li>
     </ul>
 </nav>
-
-<main></main>
-<footer></footer>
+<main class="tab-content">
+    <div id="about" data-tab-content>
+        <h1>about</h1>
+        <p>this is about</p>
+    </div>
+    <div id="portfolio" data-tab-content>
+        <h1>portfolio</h1>
+        <p>this is portfolio</p>
+    </div>
+    <div id="home" data-tab-content class="active">
+        <h1>home</h1>
+        <p>this is home</p>
+    </div>
+    <div id="blog" data-tab-content>
+        <h1>blog</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, alias aut beatae dolor dolorem ducimus eligendi, eos illo maiores maxime odio officia omnis placeat praesentium provident quas qui quos repellendus, sunt temporibus totam vero voluptatem voluptates. Ad, architecto, consequuntur, dicta dignissimos dolores facilis hic molestias quam quas ratione recusandae rem!</p>
+    </div>
+    <div id="contact" data-tab-content>
+        <h1>contact</h1>
+        <p>this is contact</p>
+    </div>
+</main>
+<footer>
+</footer>
 
 <script src="js/script.js"></script>
-<script>
-
-</script>
 </body>
 </html>
